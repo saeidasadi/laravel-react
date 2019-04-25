@@ -1,3 +1,6 @@
+import ReactDOM from "react-dom";
+import React from "react";
+import Example from "./components/Example";
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -14,3 +17,8 @@ require('./bootstrap');
  */
 
 require('./components/Example');
+
+
+if (document.getElementById('example')) {
+    ReactDOM.render(<Example/>, document.getElementById('example'));
+}
