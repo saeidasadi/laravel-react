@@ -19,6 +19,22 @@ require('./bootstrap');
 require('./components/Example');
 
 
-if (document.getElementById('example')) {
-    ReactDOM.render(<Example/>, document.getElementById('example'));
+function Welcome(props) {
+    return <h2>Welcome Home {props.name}</h2>;
 }
+
+
+const element = (
+  <div>
+      <Welcome name="Saeid"></Welcome>
+      <Welcome name="Ali"></Welcome>
+      <Welcome name="Ahmad"></Welcome>
+      <Example firstName="Saeid"/>
+  </div>
+);
+
+ReactDOM.render(
+    element,
+    document.getElementById('root')
+);
+
