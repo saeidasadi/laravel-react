@@ -28,7 +28,7 @@ function Welcome(props) {
 
 const element = (
     <div>
-        <Clock />
+        <Example users="100" />
     </div>
 );
 
