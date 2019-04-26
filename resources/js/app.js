@@ -18,6 +18,8 @@ require('./bootstrap');
 
 require('./components/Example');
 
+import Clock from './components/Clock';
+
 
 function Welcome(props) {
     return <h2>Welcome Home {props.name}</h2>;
@@ -25,12 +27,9 @@ function Welcome(props) {
 
 
 const element = (
-  <div>
-      <Welcome name="Saeid"></Welcome>
-      <Welcome name="Ali"></Welcome>
-      <Welcome name="Ahmad"></Welcome>
-      <Example firstName="Saeid"/>
-  </div>
+    <div>
+        <Clock />
+    </div>
 );
 
 ReactDOM.render(
