@@ -19,6 +19,7 @@ require('./bootstrap');
 require('./components/Example');
 
 import Clock from './components/Clock';
+import Laser from "./components/Laser";
 
 
 function Welcome(props) {
@@ -28,7 +29,7 @@ function Welcome(props) {
 
 const element = (
     <div>
-        <Example users="100" />
+        <Laser />
     </div>
 );
 
