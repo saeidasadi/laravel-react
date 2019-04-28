@@ -20,16 +20,22 @@ require('./components/Example');
 
 import Clock from './components/Clock';
 import Laser from "./components/Laser";
+import CheckboxFilter from './components/CheckboxFilter';
 
 
 function Welcome(props) {
     return <h2>Welcome Home {props.name}</h2>;
 }
 
+let choices = [
+    {id: 1, title: "Option 1"},
+    {id: 2, title: "Option 2"},
+    {id: 3, title: "Option 3"},
+];
 
 const element = (
     <div>
-        <Laser />
+        <CheckboxFilter choices={choices}/>
     </div>
 );
 
