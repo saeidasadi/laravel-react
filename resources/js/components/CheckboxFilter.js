@@ -5,7 +5,7 @@ export default class CheckboxFilter extends React.Component {
         super(props);
 
         this.state = {
-            filters: [1,2],
+            filters: [1, 3],
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -14,7 +14,13 @@ export default class CheckboxFilter extends React.Component {
     handleChange(event) {
         let target = event.target;
 
-        console.log(target.name, target.value);
+        this.setState((state) => {
+            return {
+                filters: target.checked
+                    ? state.filters.concat([parseInt(target.value)])
+                    : state.filters.filter(filter => filter != target.value)
+            }
+        });
     }
 
     render() {
@@ -24,9 +30,9 @@ export default class CheckboxFilter extends React.Component {
                     <label key={choice.id}>
                         <input name="filters[]" type="checkbox"
                                value={choice.id}
-                               checked={this.state.filters}
+                               checked={this.state.filters.includes(choice.id)}
                                onChange={this.handleChange}/>
-                        { choice.title }
+                        {choice.title}
                     </label>
                 )
             })
