@@ -24,6 +24,7 @@ import CheckboxFilter from './components/CheckboxFilter';
 import Sum from './components/Sum';
 
 
+
 function Welcome(props) {
     return <h2>Welcome Home {props.name}</h2>;
 }
@@ -33,6 +34,11 @@ let choices = [
     {id: 2, title: "Option 2"},
     {id: 3, title: "Option 3"},
 ];
+
+import("./services/Math").then(math => {
+    console.log(math.add(16, 26));
+});
+
 
 const element = (
     <div>
