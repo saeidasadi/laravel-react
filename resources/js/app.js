@@ -21,6 +21,7 @@ require('./components/Example');
 import Clock from './components/Clock';
 import Laser from "./components/Laser";
 import CheckboxFilter from './components/CheckboxFilter';
+import Sum from './components/Sum';
 
 
 function Welcome(props) {
@@ -35,7 +36,7 @@ let choices = [
 
 const element = (
     <div>
-        <CheckboxFilter choices={choices}/>
+        <Sum/>
     </div>
 );
 
