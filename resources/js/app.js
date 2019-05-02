@@ -16,18 +16,7 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require('./components/Example');
-
-import Clock from './components/Clock';
-import Laser from "./components/Laser";
-import CheckboxFilter from './components/CheckboxFilter';
-import Sum from './components/Sum';
-
-
-
-function Welcome(props) {
-    return <h2>Welcome Home {props.name}</h2>;
-}
+import App from './components/App';
 
 let choices = [
     {id: 1, title: "Option 1"},
@@ -40,14 +29,8 @@ import("./services/Math").then(math => {
 });
 
 
-const element = (
-    <div>
-        <Sum/>
-    </div>
-);
-
 ReactDOM.render(
-    element,
+    <App/>,
     document.getElementById('root')
 );
 
