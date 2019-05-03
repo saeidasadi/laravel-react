@@ -10,6 +10,8 @@ export default class SecondChildren extends React.Component {
     }
 
     render() {
-        return <span>Hello {this.context}</span>
+        let theme = this.context;
+
+        return <button style={{backgroundColor: theme.background, color: theme.foreground}}>Button</button>
     }
 }

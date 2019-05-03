@@ -1,5 +1,5 @@
 import React from 'react';
-import {ThemeContext} from './context';
+import {ThemeContext, themes} from './context';
 import FirstChildren from './FirstChildren';
 
 export default class Parent extends React.Component {
@@ -10,7 +10,7 @@ export default class Parent extends React.Component {
 
     render() {
         return (
-            <ThemeContext.Provider value={'dsds'}>
+            <ThemeContext.Provider value={themes.green}>
                 <FirstChildren/>
             </ThemeContext.Provider>
         )
