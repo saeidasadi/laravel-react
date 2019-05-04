@@ -6,7 +6,11 @@
                     <div class="card-header">Example Component</div>
 
                     <div class="card-body">
-                        I'm an example component.
+                        I'm an example component 2. Hello {{ firstName }}
+
+                        <br>
+
+                        <input type="text" v-model="firstName">
                     </div>
                 </div>
             </div>
@@ -16,6 +20,14 @@
 
 <script>
     export default {
+        name: "ExampleComponent",
+
+        data() {
+            return {
+                firstName: "",
+            }
+        },
+
         mounted() {
             console.log('Component mounted.')
         }
