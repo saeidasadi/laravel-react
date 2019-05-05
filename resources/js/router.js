@@ -19,7 +19,7 @@ const User = {
 };
 
 const UserProfile = {
-    template: '<div>User Profile {{ $route.params.id }}</div>',
+    template: '<div>User Profile {{ $route.params.id }} Ok</div>',
 };
 const UserPosts = {
     template: '<div>User Posts</div>',
@@ -29,7 +29,7 @@ const UserHome = {
 };
 
 const routes = [
-    {path: '/foo', component: Foo},
+    {name: "f", path: '/foo', component: Foo},
     {path: '/bar', component: Bar},
     {
         path: '/user/:id-:slug',
