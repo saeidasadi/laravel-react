@@ -12,6 +12,8 @@
             <router-link to="/user/400-saeid/profile">Go to User 400-saeid > Profile</router-link>
             <router-link to="/user/400-saeid/posts">Go to User 400-saeid > Posts</router-link>
             <router-link :to="{name:'f'}">Foo With Named Route</router-link>
+            <router-link to="/example">Go To Example</router-link>
+            <router-link to="/example-2">Go To Example 2</router-link>
         </p>
 
         <router-view></router-view>
@@ -20,13 +22,7 @@
 
 <script>
 
-    import ExampleComponent from './ExampleComponent';
-
     export default {
         name: "App",
-
-        components: {
-            ExampleComponent,
-        }
     }
 </script>

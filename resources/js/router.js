@@ -28,13 +28,17 @@ const UserHome = {
     template: '<div>User Home</div>',
 };
 
+// Using group put two components in same file, if we dont use it, there will be 2 chunk files
+const ExampleComponent = () => import(/* webpackChunkName: "group-example" */ './components/ExampleComponent');
+const ExampleLazy = () => import(/* webpackChunkName: "group-example" */ './components/ExampleLazy');
+
 const routes = [
     {name: "f", path: '/foo', component: Foo},
     {path: '/bar', component: Bar},
     {
         path: '/user/:id-:slug',
         component: User,
-        children:[
+        children: [
             {
                 path: '',
                 component: UserHome
@@ -49,6 +53,8 @@ const routes = [
             }
         ],
     },
+    {path: '/example-2', component: ExampleLazy},
+    {path: '/example', component: ExampleComponent},
     {path: '*', component: Unknown}
 ];
 
