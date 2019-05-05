@@ -5,6 +5,10 @@
         <p>
             <router-link to="/foo">Go to Foo</router-link>
             <router-link to="/bar">Go to Bar</router-link>
+            <router-link to="/user/100">Go to User 100</router-link>
+            <router-link to="/user/200">Go to User 200</router-link>
+            <router-link to="/user/300-">Go to User 300-</router-link>
+            <router-link to="/user/400-saeid">Go to User 400-saeid</router-link>
         </p>
 
         <router-view></router-view>
