@@ -6,11 +6,15 @@
                     <div class="card-header">Example Component</div>
 
                     <div class="card-body">
-                        I'm an example component 2. Hello {{ firstName }}
+                        Component Data: {{ firstName }}
 
                         <br>
 
-                        <input type="text" v-model="firstName">
+                        Store Data: {{ storeName }}
+
+                        <br>
+
+                        <input type="text" v-model="firstName"> <button @click.prevent="handleChange">Submit</button>
                     </div>
                 </div>
             </div>
@@ -24,7 +28,19 @@
 
         data() {
             return {
-                firstName: "",
+                firstName: "Saeid",
+            }
+        },
+
+        methods:{
+            handleChange(){
+                this.$store.commit('setName', this.firstName);
+            },
+        },
+
+        computed:{
+            storeName(){
+                return this.$store.state.name;
             }
         },
 
