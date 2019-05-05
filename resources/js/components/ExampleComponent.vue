@@ -23,6 +23,8 @@
 </template>
 
 <script>
+    import {SET_NAME} from "../store/mutation-types";
+
     export default {
         name: "ExampleComponent",
 
@@ -34,7 +36,7 @@
 
         methods:{
             handleChange(){
-                this.$store.commit('setName', this.firstName);
+                this.$store.commit(SET_NAME, this.firstName);
             },
         },
 

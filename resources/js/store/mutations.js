@@ -1,4 +1,4 @@
-export const setName = (state, newName) => {
+export const SET_NAME = (state, newName) => {
     state.name = newName;
 }
 
