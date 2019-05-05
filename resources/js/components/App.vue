@@ -9,6 +9,8 @@
             <router-link to="/user/200">Go to User 200</router-link>
             <router-link to="/user/300-">Go to User 300-</router-link>
             <router-link to="/user/400-saeid">Go to User 400-saeid</router-link>
+            <router-link to="/user/400-saeid/profile">Go to User 400-saeid > Profile</router-link>
+            <router-link to="/user/400-saeid/posts">Go to User 400-saeid > Posts</router-link>
         </p>
 
         <router-view></router-view>
