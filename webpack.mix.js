@@ -14,8 +14,8 @@ const mix = require('laravel-mix');
 mix
     .options({
         hmrOptions: {
-            host: 'mos.local',
-            port: 8080
+            host: process.env.MIX_HMR_HOST,
+            port: process.env.MIX_HMR_PORT
         }
     })
     .webpackConfig({
