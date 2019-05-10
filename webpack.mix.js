@@ -20,7 +20,8 @@ mix
     })
     .webpackConfig({
         output: {
-            chunkFilename: 'js/[name].js'   ,
+            path: '/',
+            chunkFilename: 'js/[name].js',
         }
     })
     .js('resources/js/app.js', 'public/js')

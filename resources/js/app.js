@@ -1,13 +1,12 @@
 require('./bootstrap');
 
-
 import Vue from 'vue';
 import store from './store';
-// import router from './router';
+import router from './router';
 import App from './components/App';
-// import ElementUI from 'element-ui';
+import ElementUI from 'element-ui';
 
-// Vue.use(ElementUI);
+Vue.use(ElementUI);
 
 const app = new Vue({
     el: '#app',
