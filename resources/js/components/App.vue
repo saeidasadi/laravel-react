@@ -16,6 +16,14 @@
         components: {
             RouterLayout,
             ElementLayout,
+        },
+
+        mounted() {
+            this.$http
+                .get('/google.com')
+                .then((response) => {
+                    console.log(response);
+                });
         }
     }
 </script>

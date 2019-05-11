@@ -20,7 +20,7 @@ mix
     })
     .webpackConfig({
         output: {
-            path: '/',
+            // path: '/',
             chunkFilename: 'js/[name].js',
         }
     })
