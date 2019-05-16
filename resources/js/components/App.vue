@@ -19,10 +19,19 @@
         },
 
         mounted() {
-            this.$http
-                .get('/google.com')
+            let $x = this.$http.get('/response')
                 .then((response) => {
-                    console.log(response);
+                    console.log('success');
+
+                    return response;
+                })
+                .catch((e) => {
+                    console.log('error');
+
+                    return e;
+                })
+                .finally(() => {
+                    console.log('fanally');
                 });
         }
     }

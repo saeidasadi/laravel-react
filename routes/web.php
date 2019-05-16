@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/response', function () {
+    return response()->json([
+        'user' => [
+            'first_name' => 'Saeid',
+            'last_name' => 'Asadi',
+            'age' => 25,
+        ],
+    ]);
+});
