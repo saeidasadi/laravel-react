@@ -1,7 +1,9 @@
 <template>
     <div>
-        <!--<RouterLayout></RouterLayout>-->
+        <RouterLayout></RouterLayout>
+
         <ElementLayout></ElementLayout>
+
 
     </div>
 </template>
