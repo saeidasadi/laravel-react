@@ -1,16 +1,17 @@
 <template>
     <div>
-        <RouterLayout></RouterLayout>
+        <!--<RouterLayout></RouterLayout>-->
 
-        <ElementLayout></ElementLayout>
+        <!--<ElementLayout></ElementLayout>-->
 
-
+        <ValidationLayout></ValidationLayout>
     </div>
 </template>
 
 <script>
     import RouterLayout from './Layouts/RouterLayout';
     import ElementLayout from './Layouts/ElementLayout';
+    import ValidationLayout from './Layouts/ValidationLayout';
 
     export default {
         name: "App",
@@ -18,6 +19,7 @@
         components: {
             RouterLayout,
             ElementLayout,
+            ValidationLayout,
         },
 
         mounted() {
