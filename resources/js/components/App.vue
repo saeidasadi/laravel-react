@@ -1,42 +1,15 @@
 <template>
-    <div>
-        <!--<RouterLayout></RouterLayout>-->
-
-        <!--<ElementLayout></ElementLayout>-->
-
-        <ValidationLayout></ValidationLayout>
-    </div>
+    <Main></Main>
 </template>
 
 <script>
-    import RouterLayout from './Layouts/RouterLayout';
-    import ElementLayout from './Layouts/ElementLayout';
-    import ValidationLayout from './Layouts/ValidationLayout';
+    import Main from './Layouts/Main';
 
     export default {
         name: "App",
 
         components: {
-            RouterLayout,
-            ElementLayout,
-            ValidationLayout,
+            Main,
         },
-
-        mounted() {
-            let $x = this.$http.get('/response')
-                .then((response) => {
-                    console.log('success');
-
-                    return response;
-                })
-                .catch((e) => {
-                    console.log('error');
-
-                    return e;
-                })
-                .finally(() => {
-                    console.log('fanally');
-                });
-        }
     }
 </script>
