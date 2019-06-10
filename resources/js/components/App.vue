@@ -1,10 +1,12 @@
 <template>
     <div>
+        <Header></Header>
+
         <!--<RouterLayout></RouterLayout>-->
 
         <!--<ElementLayout></ElementLayout>-->
 
-        <ValidationLayout></ValidationLayout>
+        <!--<ValidationLayout></ValidationLayout>-->
     </div>
 </template>
 
@@ -12,11 +14,13 @@
     import RouterLayout from './Layouts/RouterLayout';
     import ElementLayout from './Layouts/ElementLayout';
     import ValidationLayout from './Layouts/ValidationLayout';
+    import Header from "./Partials/Header";
 
     export default {
         name: "App",
 
         components: {
+            Header,
             RouterLayout,
             ElementLayout,
             ValidationLayout,
