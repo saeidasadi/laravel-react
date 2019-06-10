@@ -1,17 +1,9 @@
-import Axios from "axios";
+import axios from "axios";
 
-export default function install(Vue, options) {
-    let axios = Axios.create(options);
+let token = document.head.querySelector('meta[name="csrf-token"]');
 
-    Object.defineProperty(Vue.prototype, '$axios', {
-        get() {
-            return axios;
-        }
-    });
+axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
-    Object.defineProperty(Vue.prototype, '$http', {
-        get() {
-            return axios;
-        }
-    });
-}
+axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+
+export default axios;

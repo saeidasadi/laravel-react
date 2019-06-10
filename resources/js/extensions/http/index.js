@@ -1,18 +1,21 @@
 import axios from './axios';
 import Vue from 'vue';
 
-let token = document.head.querySelector('meta[name="csrf-token"]');
 
-let options = {
-    // baseURL: 'http://hello.com',
+function install(Vue, options) {
 
-    headers: {
-        common: {
-            'X-Requested-With': 'XMLHttpRequest',
+    Object.defineProperty(Vue.prototype, '$axios', {
+        get() {
+            return axios;
+        }
+    });
 
-            'X-CSRF-TOKEN': token.content
-        },
-    },
-};
+    Object.defineProperty(Vue.prototype, '$http', {
+        get() {
+            return axios;
+        }
+    });
+}
 
-Vue.use(axios, options);
+
+Vue.use(install);
